@@ -1,6 +1,9 @@
 title: Matt Gifford
 author: coldfumonkeh
 email: matt@monkehworks.com
+my_name: Matt Gifford
+my_lead: > 
+  Consultant Developer, technical author, conference speaker.
 description: > # this means to ignore newlines until "show_excerpts:"
 
 
@@ -42,13 +45,17 @@ minima:
 header_pages:
   # - about.md
 
-# paginate: 5
+
 
 # Build settings
-theme: minima
+# theme: minima
 
 plugins:
  - jekyll-feed
  - jekyll-seo-tag
+ - jekyll-paginate
 
 permalink: /:title
+
+paginate: 5
+paginate_path: "/blog/page:num/"

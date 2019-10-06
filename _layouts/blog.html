@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+{%- if site.posts.size > 0 -%}
+
+      {%- for post in site.posts limit:3 -%}
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <section class="space--xs blog-article-wide">
+            <div class="container">
+                <div class="cta cta--horizontal text-center-xs row">
+                    <div class="col-md-4">
+                        <h4>{{ post.date | date: date_format }}</h4>
+                    </div>
+                    <div class="col-md-5">
+                        <p class="lead">
+                            {{ post.title | escape }}
+                        </p>
+                    </div>
+                    <div class="col-md-3 text-right text-center-xs">
+                        <a class="btn type--uppercase" href="{{ post.url | relative_url }}">
+                            <span class="btn__text">
+                                Read Article
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--end of container-->
+        </section>
+      {%- endfor -%}
+
+    <!--
+      <p class="feed-subscribe">
+        <a href="{{ 'feed.xml' | relative_url }}">
+          <svg class="svg-icon orange"><use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use></svg><span>Subscribe</span>
+        </a>
+      </p>
+    -->
+  {%- endif -%}
