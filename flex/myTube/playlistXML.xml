@@ -1,0 +1,49 @@
+<rss>
+<channel>
+    <title>Video Playlist</title> 
+    <link></link> 
+    <description>Video Playlist for Matt Gifford</description> 
+    <item>
+    	<vidID>PMDMMfrDUBI</vidID>
+        <title>Bethamphetamine</title>
+        <artist>Butch Walker</artist>
+        <link>http://youtube.com/watch?v=PMDMMfrDUBI</link>
+        <thumb>PMDMMfrDUBI.jpg</thumb>
+	</item>
+    <item>
+    	<vidID>KiR838VOCrA</vidID>
+        <title>Misery Business (acoustic)</title>
+        <artist>Paramore</artist>
+        <link>http://youtube.com/watch?v=KiR838VOCrA</link>
+        <thumb>KiR838VOCrA.jpg</thumb>
+    </item>
+    <item>
+    	<vidID>DbC2iMFMcuk</vidID>
+        <title>Don't Drink The Water</title>
+        <artist>Dave Matthews Band</artist>
+        <link>http://youtube.com/watch?v=DbC2iMFMcuk</link>
+        <thumb>DbC2iMFMcuk.jpg</thumb>
+    </item>
+    <item>
+    	<vidID>bJU3jst3vh4</vidID>
+        <title>Mixtape</title>
+        <artist>Butch Walker</artist>
+        <link>http://youtube.com/watch?v=bJU3jst3vh4</link>
+        <thumb>bJU3jst3vh4.jpg</thumb>
+	</item>
+    <item>
+    	<vidID>WqN-qroE4ZQ</vidID>
+        <title>Canvas Bags</title>
+        <artist>Tim Minchin</artist>
+        <link>http://youtube.com/watch?v=WqN-qroE4ZQ</link>
+        <thumb>WqN-qroE4ZQ.jpg</thumb>
+    </item>
+    <item>
+    	<vidID>wS4QJz3hKUk</vidID>
+        <title>Rich People Die Unhappy</title>
+        <artist>Butch Walker</artist>
+        <link>http://youtube.com/watch?v=wS4QJz3hKUk</link>
+        <thumb>wS4QJz3hKUk.jpg</thumb>
+    </item>
+</channel>
+</rss>

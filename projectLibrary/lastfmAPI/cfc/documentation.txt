@@ -1,0 +1,123 @@
+
+Name: (I want my) lastfm
+Purpose: A ColdFusion wrapper, for use with the last.fm API
+Author: Matt Gifford (http://www.mattgifford.co.uk/)
+Date: February 2009
+Version: 1.1
+
+Revisions:
+Amendments to error handling within xml for each method - Friday 27th February, 2009
+	
+	
+DETAILS:
+=============================================
+
+I wrote this tag-based CFC wrapper to access the last.fm api (details and spec can be found here http://www.last.fm/api)
+
+There are 15 components in total, 13 of which contain methods and functions relating to the last.fm api.
+
+The utility.cfc contains generic methods/functions that are used in various places throughout the components 
+(making calls to the methods, formatting and stripping XML, for example)
+
+I wanted to try and develop something that was easy to implement, and easy to use.
+
+The system I came up with requires the user to access ONE method within ONE component only, 
+and all classes, methods and arguments are passed through this one function.
+
+The user only needs to createObject for the API.cfc file.
+This takes two params (the api key and secret key provided to you by last.fm).
+
+
+	Example:
+
+	<cfset api = createObject("component", "cfc.api").init('__api__key__','__secret__key__') />
+
+
+
+That's it. The api wrapper is effectively ready to go.
+
+To access individual methods, the process is a simple one.
+Last.fm organised and arranged their method calls into a class name.method name format eg user.getInfo.
+
+There is one single function within the API.cfc that the user needs to call: methodCall().
+This takes three params (the class name, the method name, the params to send to the method)
+
+The param argument takes a struct format argument collection, so a call to user.getInfo (with username) would be like this:
+
+
+
+	Example:
+
+	<cfset args = StructNew() />
+	<cfset args["user"] = "mattgifford" />
+
+	<cfset thisUserInfo = api.methodCall('user', 'getinfo', args) />
+
+
+
+Easy!
+
+
+
+ACCESSING AUTHETICATED METHODS
+============================================
+
+When using any of the methods that require authentication (for example, write methods such as event.attend, or track.share)
+you will need a last.fm session key.
+
+Check the last.fm api documentation for full details (http://www.last.fm/api/authentication)
+
+but the best solution is to store the key within the session scope after callback (the api will redirect the user to a page you specify
+when setting up your API details.
+
+So, to access the track.share method, you would use something like the following:
+
+	Example:
+	
+	<cfset args = StructNew() />
+	<cfset args["artist"] = "1969" />
+	<cfset args["track"] = "Wreck Me" />
+	<cfset args["recipient"] = "me@mattgifford.co.uk" />
+	<cfset args["message"] = "Hey! This song is awesome! Check it out!" />
+	<cfset args["sessionKey"] = "#session.key#" />	
+
+	<cfset thisUserInfo = api.methodCall('track', 'share', args) />
+
+
+
+OUTPUT:
+=============================================
+
+Each of the functions within the main methods contain an extra argument (return).
+This is used to allow you to choose what format you would like to receive the data.
+As default, this is 'struct'.
+All functions have the option for 'xml' output.
+
+Most of them (with only a few exceptions where there is no repeating data to require it) have the option for 'query',
+allowing you to easily loop through and output data.
+
+
+
+NOTES
+=============================================
+
+The only location of hardcoded data within any of the components is in the API.cfc within the init function.
+
+<cfset variables.stuInstance.rootURL = 'http://ws.audioscrobbler.com/2.0/' />
+<cfset variables.stuInstance.authURL = 'http://www.last.fm/api/auth/' />
+
+These are the two locations/paths used by the api to access the remote methods.
+
+
+FEEDBACK AND GOODBYES
+=============================================
+
+That's about it.
+I hope you enjoy it, and hopefully get some use out of this wrapper.
+Thsi was started at the beginning of January 2009, but sadly time and comittments meant a delay in publishing.
+
+If you have any feedback, comments or questions, please feel free to post on project page:	http://www.mattgifford.co.uk/blog/lastfmcfclastfmcfc/
+
+Many thanks,
+
+Matt Gifford

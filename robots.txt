@@ -1,0 +1,38 @@
+#
+#                                  _____
+#                                 |     |
+#                                 | | | |
+#                                 |_____|
+#                           ____ ___|_|___ ____
+#                          ()___)         ()___)
+#                          // /|           |\ \\
+#                         // / |           | \ \\
+#                        (___) |___________| (___)
+#                        (___)   (_______)   (___)
+#                        (___)     (___)     (___)
+#                        (___)      |_|      (___)
+#                        (___)  ___/___\___   | |
+#                         | |  |           |  | |
+#                         | |  |___________| /___\
+#                        /___\  |||     ||| //   \\
+#                       //   \\ |||     ||| \\   //
+#                       \\   // |||     |||  \\ //
+#                        \\ // ()__)   (__()
+#                              ///       \\\
+#                             ///         \\\
+#                           _///___     ___\\\_
+#                          |_______|   |_______|
+#
+# Hello stranger.  You seem to be a bit lost.  There's really nothing of interest to see in here.
+#
+# Why don't you head over to my website at http://mattgifford.co.uk and look at some of the more
+# interesting things I'm offering on my website rather than this boring old robots.txt file?
+#
+
+User-agent: AboutUsBot
+Disallow: /
+
+User-agent: *
+Disallow: /stats/
+
+Sitemap: https://monkehworks.com/sitemap.xml

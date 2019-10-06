@@ -1,0 +1,723 @@
+<html>
+<head>
+<title>Component MTVVids</title>
+<style>
+body  {
+	font-family: verdana, arial, helvetica, sans-serif;
+	background-color: #FFFFFF;
+	font-size: 12px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+table	{
+	font-size: 11px;
+	font-family: Verdana, arial, helvetica, sans-serif;
+	width: 90%;
+}
+
+th {
+	padding: 6px;
+	font-size: 12px;
+	background-color: #cccccc;
+}
+
+td {
+	padding: 6px;
+	background-color: #eeeeee;
+	vertical-align : top;
+}
+
+code {
+	color: #000099 ;
+}
+</style>
+
+</head>
+<body>
+
+
+<font size="-2">MTVVids</font><br>
+<font size="+1"><b>Component MTVVids
+(MTVVids)
+</b></font>
+
+
+
+
+<br><br><br>
+<table>
+
+<p>contains functions to access the MTVN video API (http://developer.mtvnservices.com/)</p>
+<p>Name: MTVVids.cfc<br />
+Author: Matt Gifford (http://www.mattgifford.co.uk/)<br />
+Date: Friday 31st October, 2008 (Happy Halloween)<br />
+Purpose: a CFC created for ColdFusion users to interact with the MTV Networks API (http://developer.mtvnservices.com/)<br />
+Copyright (c) 2008 Matt Gifford<br />
+Licensed under the Creative Commons Attribution-Noncommercial-ShareAlike License
+http://creativecommons.org/licenses/by-nc-sa/3.0/</p>
+
+<p>If you use this CFC, like it, or just want to be friendly, please drop by my site/blog/project page to say hello.<br />
+It would be great to hear from people using this CFC. Many thanks.</p>
+
+<tr><td>methods:</td>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<td> <a href="#method_allVideosByArtist">allVideosByArtist</a>, <a href="#method_artistBrowse">artistBrowse</a>, <a href="#method_getArtistAlias">getArtistAlias</a>, <a href="#method_getRelatedArtists">getRelatedArtists</a>, <a href="#method_getVideoByID">getVideoByID</a>, <a href="#method_searchArtist">searchArtist</a>, <a href="#method_searchVideo">searchVideo</a></td>
+
+</tr>
+
+
+
+
+
+</table>
+<font size="-2">* - private method</font>
+
+
+
+
+
+
+
+
+
+
+<br><br><table>
+
+
+	
+	
+	
+	
+	
+	<tr><th align="left" colspan="1">
+		<a name="method_allVideosByArtist">allVideosByArtist</a>
+		
+		</th></tr>
+	<tr><td>
+	
+	
+	
+	<code>
+
+	
+		<i>public</i>
+	
+	
+		<i>any</i>
+	
+	<b>allVideosByArtist</b>
+	
+	(
+ 	
+		
+		<i>
+		required
+		string
+		</i>
+		artist_uri,
+	
+		
+		<i>
+
+		
+		string
+		</i>
+		returnQuery="no"
+		
+	)
+	</i>
+	</code>
+	<br><br>	
+	
+	
+	
+	
+	Output: enabled<br>
+	
+	
+	
+		Parameters:<br>
+		
+			
+			&nbsp;&nbsp; <b>artist_uri:</b>
+
+			string,
+			required,
+			artist_uri
+			- the unique uri link for the artist (eg: http://api.mtvnservices.com/1/artist/[artist_uri]/videos/)
+			<br>
+		
+			
+			&nbsp;&nbsp; <b>returnQuery:</b>
+			string,
+			optional,
+			returnQuery
+			- if yes, the results will be returned as a query recordset. Default is 'no'.
+			<br>
+		
+	
+	
+	<br>
+	</td></tr>
+
+
+	
+	
+	
+	
+	
+	<tr><th align="left" colspan="1">
+
+		<a name="method_artistBrowse">artistBrowse</a>
+		
+		</th></tr>
+	<tr><td>
+	
+	
+	
+	<code>
+	
+		<i>public</i>
+	
+	
+		<i>any</i>
+	
+	<b>artistBrowse</b>
+
+	
+	(
+ 	
+		
+		<i>
+		required
+		string
+		</i>
+		browseAlpha,
+	
+		
+		<i>
+		
+		string
+		</i>
+		returnQuery="no"
+		
+	)
+	</i>
+	</code>
+
+	<br><br>	
+	
+	
+	
+	
+	Output: enabled<br>
+	
+	
+	
+		Parameters:<br>
+		
+			
+			&nbsp;&nbsp; <b>browseAlpha:</b>
+			string,
+			required,
+			browseAlpha
+			- a single character, required for searching. ('a-z', or '-' for other characters)
+			<br>
+		
+			
+			&nbsp;&nbsp; <b>returnQuery:</b>
+
+			string,
+			optional,
+			returnQuery
+			- if yes, will convert the output to a query format. Default is 'no'.
+			<br>
+		
+	
+	
+	<br>
+	</td></tr>
+
+
+	
+	
+	
+	
+	
+	<tr><th align="left" colspan="1">
+		<a name="method_getArtistAlias">getArtistAlias</a>
+		
+		</th></tr>
+	<tr><td>
+
+	
+	
+	
+	<code>
+	
+		<i>public</i>
+	
+	
+		<i>any</i>
+	
+	<b>getArtistAlias</b>
+	
+	(
+ 	
+		
+		<i>
+		required
+		string
+		</i>
+
+		artistURI,
+	
+		
+		<i>
+		
+		string
+		</i>
+		returnQuery="no"
+		
+	)
+	</i>
+	</code>
+	<br><br>	
+	
+	
+	
+	
+	Output: enabled<br>
+	
+	
+	
+		Parameters:<br>
+
+		
+			
+			&nbsp;&nbsp; <b>artistURI:</b>
+			string,
+			required,
+			artistURI
+			- the unique uri link for the artist (eg: http://api.mtvnservices.com/1/artist/[artist_uri]/)
+			<br>
+		
+			
+			&nbsp;&nbsp; <b>returnQuery:</b>
+			string,
+			optional,
+			returnQuery
+			- if yes, the results will be returned as a query recordset. Default is 'no'.
+			<br>
+		
+	
+	
+	<br>
+	</td></tr>
+
+
+	
+	
+	
+	
+	
+	<tr><th align="left" colspan="1">
+		<a name="method_getRelatedArtists">getRelatedArtists</a>
+		
+		</th></tr>
+	<tr><td>
+	
+	
+	
+	<code>
+	
+		<i>public</i>
+	
+	
+		<i>any</i>
+
+	
+	<b>getRelatedArtists</b>
+	
+	(
+ 	
+		
+		<i>
+		required
+		string
+		</i>
+		artistRelatedLink,
+	
+		
+		<i>
+		
+		string
+		</i>
+		returnQuery="no"
+		
+	)
+	</i>
+
+	</code>
+	<br><br>	
+	
+	
+	
+	
+	Output: enabled<br>
+	
+	
+	
+		Parameters:<br>
+		
+			
+			&nbsp;&nbsp; <b>artistRelatedLink:</b>
+			string,
+			required,
+			artistRelatedLink
+			- a link containing the artist uri (eg: http://api.mtvnservices.com/1/artist/[artist_uri]/related/)
+			<br>
+		
+			
+			&nbsp;&nbsp; <b>returnQuery:</b>
+
+			string,
+			optional,
+			returnQuery
+			- if yes, the results will be returned as a query recordset. Default is 'no'.
+			<br>
+		
+	
+	
+	<br>
+	</td></tr>
+
+
+	
+	
+	
+	
+	
+	<tr><th align="left" colspan="1">
+		<a name="method_getVideoByID">getVideoByID</a>
+		
+		</th></tr>
+	<tr><td>
+
+	
+	
+	
+	<code>
+	
+		<i>public</i>
+	
+	
+		<i>any</i>
+	
+	<b>getVideoByID</b>
+	
+	(
+ 	
+		
+		<i>
+		required
+		string
+		</i>
+
+		videoID,
+	
+		
+		<i>
+		
+		string
+		</i>
+		returnQuery="no"
+		
+	)
+	</i>
+	</code>
+	<br><br>	
+	
+	
+	
+	
+	Output: enabled<br>
+	
+	
+	
+		Parameters:<br>
+
+		
+			
+			&nbsp;&nbsp; <b>videoID:</b>
+			string,
+			required,
+			videoID
+			- a link string, containing the unique video reference (eg: http://api.mtvnservices.com/1/video/hznHivqrbHHZDPDWS/)
+			<br>
+		
+			
+			&nbsp;&nbsp; <b>returnQuery:</b>
+			string,
+			optional,
+			returnQuery
+			- if yes, the results will be returned as a query recordset. Default is 'no'
+			<br>
+		
+	
+	
+	<br>
+	</td></tr>
+
+
+	
+	
+	
+	
+	
+	<tr><th align="left" colspan="1">
+		<a name="method_searchArtist">searchArtist</a>
+		
+		</th></tr>
+	<tr><td>
+	
+	
+	
+	<code>
+	
+		<i>public</i>
+	
+	
+		<i>any</i>
+
+	
+	<b>searchArtist</b>
+	
+	(
+ 	
+		
+		<i>
+		required
+		string
+		</i>
+		searchTerm,
+	
+		
+		<i>
+		
+		numeric
+		</i>
+		maxResults="1",
+	
+		
+		<i>
+
+		
+		string
+		</i>
+		includeRelated="no",
+	
+		
+		<i>
+		
+		string
+		</i>
+		returnQuery="no"
+		
+	)
+	</i>
+	</code>
+	<br><br>	
+	
+	
+	
+	
+	Output: enabled<br>
+
+	
+	
+	
+		Parameters:<br>
+		
+			
+			&nbsp;&nbsp; <b>searchTerm:</b>
+			string,
+			required,
+			searchTerm
+			- the name of the artist/band to search for. The function will escape any characters and URLEncode the term for you
+			<br>
+		
+			
+			&nbsp;&nbsp; <b>maxResults:</b>
+			numeric,
+			optional,
+			maxResults
+			- the maximum number of results you want returned
+			<br>
+
+		
+			
+			&nbsp;&nbsp; <b>includeRelated:</b>
+			string,
+			optional,
+			includeRelated
+			- if yes, an extra struct is included, which holds the details of artists/bands related to the selected artist
+			<br>
+		
+			
+			&nbsp;&nbsp; <b>returnQuery:</b>
+			string,
+			optional,
+			returnQuery
+			- if yes, the results will be returned as a query recordset. Default is 'no'.
+			<br>
+		
+	
+	
+	<br>
+	</td></tr>
+
+
+	
+	
+	
+	
+	
+	<tr><th align="left" colspan="1">
+		<a name="method_searchVideo">searchVideo</a>
+		
+		</th></tr>
+	<tr><td>
+	
+	
+	
+	<code>
+	
+		<i>public</i>
+	
+	
+		<i>any</i>
+
+	
+	<b>searchVideo</b>
+	
+	(
+ 	
+		
+		<i>
+		required
+		string
+		</i>
+		searchTerm,
+	
+		
+		<i>
+		
+		numeric
+		</i>
+		maxResults="1",
+	
+		
+		<i>string</i> includeRelated="yes",
+	
+		
+		<i>
+		
+		string
+		</i>
+		returnQuery="no"
+		
+	)
+	</i>
+	</code>
+	<br><br>	
+	
+	
+	
+	
+	Output: enabled<br>
+
+	
+	
+	
+		Parameters:<br>
+		
+			
+			&nbsp;&nbsp; <b>searchTerm:</b>
+			string,
+			required,
+			searchTerm
+			- the name of the artist/band to search for. The function will escape any characters and URLEncode the term for you
+			<br>
+		
+			
+			&nbsp;&nbsp; <b>maxResults:</b>
+			numeric,
+			optional,
+			maxResults
+			- the maximum number of results you want returned
+			<br>
+
+		
+			
+			&nbsp;&nbsp; <b>includeRelated:</b>
+			string,
+			optional,
+			includeRelated
+			- if yes, an extra struct is included, which holds the details of artists/bands related to the selected artist
+			<br>
+		
+			
+			&nbsp;&nbsp; <b>returnQuery:</b>
+			string,
+			optional,
+			returnQuery
+			- if yes, the results will be returned as a query recordset. Default is 'no'
+			<br>
+		
+	
+	
+	<br>
+	</td></tr>
+
+</table>
+
+</body></html>
