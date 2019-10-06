@@ -1,4 +1,4 @@
-{%- assign social = site.minima.social_links -%}
+{%- assign social = site.social_links -%}
 
 <ul class="social-list list-inline list--hover">
   {%- if social.dribbble -%}<li class="list-inline-item"><a href="https://dribbble.com/{{ social.dribbble | cgi_escape | escape }}" target="_blank" title="{{ social.dribbble | escape }}"><i class="socicon socicon-dribble icon icon--xs"></i></a></li>{%- endif -%}

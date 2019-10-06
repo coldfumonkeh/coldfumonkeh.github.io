@@ -76,7 +76,7 @@
                                 <h2>Latest Blog Posts</h2>
 
                                 {%- for post in site.posts limit:3 -%}
-                                    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                                    {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
 
                                     <a href="{{ post.url | relative_url }}" class="block">
                                         <div class="feature boxed boxed--border bg--secondary">

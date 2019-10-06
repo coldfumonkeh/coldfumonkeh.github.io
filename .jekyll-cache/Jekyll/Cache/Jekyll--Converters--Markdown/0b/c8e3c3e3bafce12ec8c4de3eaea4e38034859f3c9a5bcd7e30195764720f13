@@ -1,18 +1,4 @@
----
-layout: post
-title: Acrobat 9 - PDF 2.0
-slug: acrobat-9-pdf-20
-date: 2008-07-03
-categories:
-- General
-tags:
-- Adobe
-- Geek
-status: publish
-type: post
-draft: true
----
-<p>I've had the pleasure of using and testing a BETA version of Acrobat 9 Pro Extended, the latest version of Acrobat.</p>
+I"<p>I've had the pleasure of using and testing a BETA version of Acrobat 9 Pro Extended, the latest version of Acrobat.</p>
 <p>This is a fantastic pdf authoring tool, giving the user much more control over creating forms, comments and drafts. Some of the main features I love:</p>
 <ul>
 <li>The portfolio - you can create a stunning (even from the templates included) dynamic animated portfolio/presentation from multiple files, one method of delivery is in a CoverFlow style carousel.</li>
@@ -21,3 +7,4 @@ draft: true
 <li>Presentation - Acrobat 9 now has the same functionality as the cfpresentation tag within ColdFusion 8, allowing for fantastic interactive, media-rich presentations</li>
 </ul>
 <p>All in all, a fantastic little (not so small, the file size is huge) package, that just keeps getting better and better. Macromedia is dead. Long live Adobe.</p>
+:ET
