@@ -1,0 +1,5 @@
+---
+---
+{%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
+{% for post in site.posts %}https://www.monkehworks.com/{{ post.slug }}, https://www.monkehworks.com{{ post.url }}{% unless forloop.last %},
+{% endunless %}{% endfor %}

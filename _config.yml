@@ -47,7 +47,7 @@ social_links:
 header_pages:
   # - about.md
 
-
+highlighter: rouge
 
 # Build settings
 

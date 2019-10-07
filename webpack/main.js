@@ -1,0 +1,18 @@
+const $ = require('jquery');
+window.jQuery = $;
+// require('../assets/js/jquery-3.1.1.min.js');
+require('../assets/js/flickity.min.js');
+// require('../assets/js/easypiechart.min.js');
+// require('../assets/js/parallax.js');
+// require('../assets/js/typed.min.js');
+// require('../assets/js/datepicker.js');
+// require('../assets/js/isotope.min.js');
+require('../assets/js/ytplayer.min.js');
+// require('../assets/js/lightbox.min.js');
+// require('../assets/js/granim.min.js');
+// require('../assets/js/jquery.steps.min.js');
+// require('../assets/js/countdown.min.js');
+// require('../assets/js/twitterfetcher.min.js');
+// require('../assets/js/spectragram.min.js');
+require('../assets/js/smooth-scroll.min.js');
+require('../assets/js/scripts.js');
