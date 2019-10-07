@@ -13,7 +13,8 @@ markdown: kramdown
 
 date_format: "%b %-d, %Y"
 
-disqus.shortname: mattgifford
+disqus:
+  shortname: mattgifford
 
 # generate social links in footer
 social_links:
