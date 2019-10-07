@@ -19,7 +19,7 @@ Despite major jet lag throughout the entire conference (my outbound journey was 
 
 There was a fantastic range of speakers and topics covered over the two days, as well as a full day of workshops on Monday 30th September, for those who had it included with their ticket.
 
-The biggest highlight for me was meeting old friend again, and meeting many new ones, including [Matt Clemente](http://blog.mattclemente.com), whose work I have used over the years, and whose help I have gained on a project here and there. It was a pleasure to geek out with him about running, APIs and life in general. Thanks Matt!
+The biggest highlight for me was meeting old friends again, and meeting many new ones, including [Matt Clemente](http://blog.mattclemente.com), whose work I have used over the years, and whose help I have gained on a project here and there. It was a pleasure to geek out with him about running, APIs and life in general. Thanks Matt!
 
 Below is a outline of sessions I attended, as well as general information and highlights from the trip.
 
@@ -39,7 +39,7 @@ I ducked out of the session slot after my talk for the traditional 'post-present
 
 11:45am I attended [Gavin Pickin's](http://wwvv.gavinpickin.com/) "Start Integrated Testing - The biggest and easiest ( testing ) bang for your buck".
 
-Whilst I am a fairly heavy user and believer in unit testing, and have been for some time, it's always prudent to go to another testing presentation to a) make sure I'm doing it correctly and b) see if there are new options or tools out there. I haven't used 'Integrated' before, as it's a new tool, so it was nice to see that in action and pick up a few more ideas on how to implement it.
+Whilst I am a fairly heavy user and believer in unit testing, and have been for some time, it's always prudent to go to another testing presentation to a) make sure I'm doing it correctly and b) see if there are new options or tools out there. I haven't used [Integrated](https://forgebox.io/view/integrated) before as it's a new tool, so it was nice to see that in action and pick up a few more ideas on how to implement it.
 
 3:00pm was time for [Daniel Fredericks](https://twitter.com/fmdano74) with "From Legacy to Modern, Techniques to update your Legacy Sites".
 
@@ -47,17 +47,17 @@ Although most of my apps use modern code and frameworks, I also work on legacy s
 
 The 4:15pm slot was a visit to see [Minh Vo](http://draftstudios.com/) and his talk "Reinforcement Learning with ColdFusion - Adding Practical Autonomy To Your Web Applications".
 
-I'd never considered using CFML as a tool for RL applications before. The math involved was astounding, and it was fantastic to see not only the finished product in a few examples, but also that the library and the 'brain' for the learning was open source.
+I'd never considered using CFML as a tool for RL applications before. The math involved was astounding, and it was fantastic to see not only the finished product in a few examples, but also that the library and the 'brain' for the learning was [open source](https://github.com/draftstudios/reinforcement).
 
 The evening party was held at the Still bar in the Mirage hotel, where the community descended to join each other in some drinks, games and conversation.
 
 ## Day 2
 
-The opening keynote for day 2 was, for me, the stand-out session. [Andrew Tarvin](https://www.humorthatworks.com/) entertained us with "Humor That Works: The Secret to Being More Productive, Less Stressed, and Happier". It was informatiev, thought-provoking and incredibly funny. The slides were every presenters dream; clean, concise and really attractive in a minimal way. The timing of the talk and the speaker's skills were also incredible.
+The opening keynote for day 2 was, for me, the stand-out session. [Andrew Tarvin](https://www.humorthatworks.com/) entertained us with "Humor That Works: The Secret to Being More Productive, Less Stressed, and Happier". It was informative, thought-provoking and incredibly funny. The slides were every presenters dream; clean, concise and really attractive in a minimal way. The timing of the talk and the speaker's skills were also incredible.
 
 10:15am and I was off to see Matt Clemente wax lyrical about APIs with "GET /cfml - A Guide to Writing API Wrappers".
 
-I am a HUGE fan of APIs (just a look at my [Github repository]([Github repository](https://github.com/coldfumonkeh)) will tell you that), and Matt gave a fantastic talk on his API passion, how he got started with them, and how he improved his development flow when building API wrappers by creating an API skeleton toolkit to help scaffold up the essentials; this toolkit is open source and available on [ForgeBox](https://forgebox.io/view/api-wrapper-template).
+I am a HUGE fan of APIs (just a brief look at my [Github repository]([Github repository](https://github.com/coldfumonkeh)) will tell you that), and Matt gave a fantastic talk on his API passion, how he got started with them, and how he improved his development flow when building API wrappers by creating an API skeleton toolkit to help scaffold up the essentials; this toolkit is open source and available on [ForgeBox](https://forgebox.io/view/api-wrapper-template).
 
 11:30am was spent listening to my good friend [Mr Dave Ferguson](https://twitter.com/dfgrumpy) give his talk on "SQL, I learned enough to break everything".
 
@@ -65,7 +65,7 @@ Everyone could do with attending his talk on SQL issues, as I am fairly sure we 
 
 1:30pm was spent listening to George Murphy give his talk "Shut the door to vulnerabilities in your code with these tools".
 
-CodeChecker is a tool I have used and still used to this day, but I haven't as of yet used [Pete Freitag](https://www.petefreitag.com)'s [Fixinator](https://fixinator.app/) tool yet. I'm certainly going to be checking that one out very soon!
+[CodeChecker](https://forgebox.io/view/CodeChecker) is a tool I have used and still used to this day, but I haven't as of yet used [Pete Freitag](https://www.petefreitag.com)'s [Fixinator](https://fixinator.app/) tool. I'm certainly going to be checking that one out very soon!
 
 2:45pm and time for a presentation from a member of the Adobe team; Uday Ogra's "[Angularjs + Reactjs + Vuejs] + CF - Integrating modern day JS frameworks with ColdFusion".
 
@@ -103,3 +103,5 @@ As for the community itself, I met so many new faces last week, some of whom had
 The community is far from dead when we get new faces joining all of the time.
 
 To the Adobe ColdFusion team and all of the staff who worked so hard to put this incredible conference together, thank you!
+
+Here's to The Adobe ColdFusion 2020 Summit!
