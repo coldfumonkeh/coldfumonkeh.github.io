@@ -51,9 +51,9 @@ header_pages:
 plugins:
  - jekyll-feed
  - jekyll-seo-tag
- #- jekyll-paginate
+ - jekyll-paginate
 
 permalink: /:title
 
-#paginate: 5
-#paginate_path: "/blog/page:num/"
+paginate: 5
+paginate_path: "/blog/page:num/"

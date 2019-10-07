@@ -2,39 +2,123 @@
 layout: default
 ---
 
-{%- if site.posts.size > 0 -%}
-
-      {%- for post in site.posts limit:3 -%}
-        {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
-        <section class="space--xs blog-article-wide">
-            <div class="container">
-                <div class="cta cta--horizontal text-center-xs row">
-                    <div class="col-md-4">
-                        <h4>{{ post.date | date: date_format }}</h4>
-                    </div>
-                    <div class="col-md-5">
-                        <p class="lead">
-                            {{ post.title | escape }}
-                        </p>
-                    </div>
-                    <div class="col-md-3 text-right text-center-xs">
-                        <a class="btn type--uppercase" href="{{ post.url | relative_url }}">
-                            <span class="btn__text">
-                                Read Article
-                            </span>
-                        </a>
-                    </div>
-                </div>
+{% for post in paginator.posts %}
+  {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
+  <section class="space--xs blog-article-wide">
+    <div class="container">
+        <div class="cta cta--horizontal text-center-xs row">
+            <div class="col-md-4">
+                <h4>{{ post.date | date: date_format }}</h4>
             </div>
-            <!--end of container-->
-        </section>
-      {%- endfor -%}
+            <div class="col-md-5">
+                <p class="lead">
+                    {{ post.title | escape }}
+                </p>
+            </div>
+            <div class="col-md-3 text-right text-center-xs">
+                <a class="btn type--uppercase" href="{{ post.url | relative_url }}">
+                    <span class="btn__text">
+                        Read Article
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--end of container-->
+  </section>
+{% endfor %}
 
-    <!--
-      <p class="feed-subscribe">
-        <a href="{{ 'feed.xml' | relative_url }}">
-          <svg class="svg-icon orange"><use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use></svg><span>Subscribe</span>
-        </a>
-      </p>
-    -->
-  {%- endif -%}
+<section>
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+
+              {% if paginator.total_pages > 1 %}
+
+              {% assign start = paginator.page | minus: 2 %}
+              {% assign end = paginator.page | plus: 2 %}
+            
+              {% if start < 1 %}
+                {% assign start = 1 %}
+                {% assign end = start | plus: 4 %}
+              {% elsif end > paginator.total_pages %}
+                {% assign start = paginator.total_pages | minus: 4 %}
+                {% assign end = paginator.total_pages %}
+              {% endif %}
+            
+              {% if start < 1 %}
+                {% assign start = 1 %}
+              {% endif %}
+            
+              {% if end > paginator.total_pages %}
+                {% assign end = paginator.total_pages %}
+              {% endif %}
+            
+                <div class="pagination">
+                  {% if paginator.previous_page %}
+                    <a class="pagination__prev" title="Previous Page" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+                      &laquo;
+                    </a>
+                  {% else %}
+                    <span class="pagination__prev">
+                        &laquo;
+                    </span>
+                  {% endif %}
+
+                  <ol>
+            
+                  {% if start > 1 %}
+                    <li>
+                      <a class="pagination-first" href="{{ site.baseurl }}/blog">1</a>
+                    </li>
+                    <li>
+                      <span class="pagination-more">&middot;&middot;&middot;</span>
+                    </li>
+                  {% endif %}
+            
+                  {% for page in (start..end) %}
+                    {% if page == paginator.page %}
+                      <li>
+                        <a class="pagination__current">{{ page }}</span>
+                      </li>
+                    {% elsif page == 1 %}
+                      <li>
+                        <a href="{{ site.baseurl }}/blog">{{ page }}</a>
+                      </li>
+                    {% else %}
+                      <li>
+                        <a href="{{ site.baseurl }}/blog/page{{ page }}">{{ page }}</a>
+                      </li>
+                    {% endif %}
+                  {% endfor %}
+            
+                  {% if end < paginator.total_pages %}
+                    <li>
+                      <span class="pagination-more">&middot;&middot;&middot;</span>
+                    </li>
+                    <li>
+                      <a href="{{ site.baseurl }}/blog/page{{ paginator.total_pages }}">{{ paginator.total_pages }}</a>
+                    </li>
+                  {% endif %}
+
+                  </ol>
+            
+                  {% if paginator.next_page %}
+                    <a class="pagination__next" title="Next Page" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+                      &raquo;
+                    </a>
+                  {% else %}
+                    <span class="pagination__next">
+                      &raquo;
+                    </span>
+                  {% endif %}
+                </div>
+            {% endif %}
+
+              
+          </div>
+      </div>
+      <!--end of row-->
+  </div>
+  <!--end of container-->
+</section>
