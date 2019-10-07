@@ -35,11 +35,6 @@
                         </div>
                         <div class="col-lg-4 col-lg-offset-0 col-md-5 col-md-offset-0 col-8 col-offset-2">
                             <div class="bar__module">
-                                <a class="btn btn--sm type--uppercase" href="/blog">
-                                    <span class="btn__text">
-                                        Blog
-                                    </span>
-                                </a>
                                 <a class="btn btn--sm btn--primary type--uppercase" href="/blog">
                                     <span class="btn__text">
                                         Blog
@@ -78,7 +73,7 @@
                                 {%- for post in site.posts limit:3 -%}
                                     {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
 
-                                    <a href="{{ post.url | relative_url }}" class="block">
+                                    <a href="{{ post.url | relative_url }}" class="block" title="{{ post.title | escape }}">
                                         <div class="feature boxed boxed--border bg--secondary">
                                             <span class="label">{{ post.date | date: date_format }}</span>
                                             <h5>{{ post.title | escape }}</h5>

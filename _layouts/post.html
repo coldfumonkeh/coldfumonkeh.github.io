@@ -20,6 +20,7 @@ layout: default
                     <div class="article__body">
                         {{ content }}
                     </div>
+                    <!--
                     <div class="article__share text-center">
                         <a class="btn bg--facebook btn--icon" href="#">
                             <span class="btn__text">
@@ -34,9 +35,54 @@ layout: default
                             </span>
                         </a>
                     </div>
+                    -->
                 </article>
                 <!--end item-->
             </div>
+        </div>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+</section>
+
+<section class="space--sm">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <hr>
+            </div>
+        </div>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+</section>
+
+{% include disqus_comments.html %}
+
+
+<section class="bg--secondary">
+    <div class="container">
+        <div class="row text-block">
+            <div class="col-md-12">
+                <h3>Latest Blog Posts</h3>
+            </div>
+        </div>
+        <!--end of row-->
+        <div class="row">
+            {%- for post in site.posts limit:3 -%}
+                {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
+            <div class="col-md-4">
+                <article class="feature feature-1">
+                    <div class="feature__body boxed boxed--border">
+                        <span>{{ post.date | date: date_format }}</span>
+                        <h5>{{ post.title | escape }}</h5>
+                        <a href="{{ post.url | relative_url }}">
+                            Read More
+                        </a>
+                    </div>
+                </article>
+            </div>
+            {%- endfor -%}
         </div>
         <!--end of row-->
     </div>

@@ -2,23 +2,18 @@
 layout: default
 ---
 
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
-
-<div class="container">
-  <h1>404</h1>
-
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+<section class="height-100 bg--dark text-center">
+    <div class="container pos-vertical-center">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="h1--large">404</h1>
+                <p class="lead">
+                    The page you were looking for was not found.
+                </p>
+                <a href="{{ site.baseurl }}">Go back to home page</a>
+            </div>
+        </div>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+</section>

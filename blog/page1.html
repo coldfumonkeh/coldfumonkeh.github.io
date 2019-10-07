@@ -1,0 +1,94 @@
+---
+layout: default
+---
+
+{{ site.posts.length }}
+
+{% for post in site.posts limit: 5 %}
+  {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
+  <section class="space--xs blog-article-wide">
+    <div class="container">
+        <div class="cta cta--horizontal text-center-xs row">
+            <div class="col-md-4">
+                <h4>{{ post.date | date: date_format }}</h4>
+            </div>
+            <div class="col-md-5">
+                <p class="lead">
+                    {{ post.title | escape }}
+                </p>
+            </div>
+            <div class="col-md-3 text-right text-center-xs">
+                <a class="btn type--uppercase" href="{{ post.url | relative_url }}">
+                    <span class="btn__text">
+                        Read Article
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--end of container-->
+  </section>
+{% endfor %}
+
+<section>
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+
+
+              {% assign start = paginator.page | minus: 2 %}
+              {% assign end = paginator.page | plus: 2 %}
+            
+              {% if start < 1 %}
+                {% assign start = 1 %}
+                {% assign end = start | plus: 4 %}
+              {% elsif end > paginator.total_pages %}
+                {% assign start = paginator.total_pages | minus: 4 %}
+                {% assign end = paginator.total_pages %}
+              {% endif %}
+            
+              {% if start < 1 %}
+                {% assign start = 1 %}
+              {% endif %}
+            
+              {% if end > paginator.total_pages %}
+                {% assign end = paginator.total_pages %}
+              {% endif %}
+            
+                <div class="pagination">
+                    <span class="pagination__prev">
+                        &laquo;
+                    </span>
+
+                  <ol>
+            
+                  {% for page in (start..end) %}
+                    {% if page == 1 %}
+                      <li>
+                        <a class="pagination__current">{{ page }}</span>
+                      </li>
+                    {% else %}
+                      <li>
+                        <a href="{{ site.baseurl }}/blog/page{{ page }}">{{ page }}</a>
+                      </li>
+                    {% endif %}
+                  {% endfor %}
+
+                    <li>
+                        <span class="pagination-more">&middot;&middot;&middot;</span>
+                    </li>
+
+                    </ol>
+            
+                    <a class="pagination__next" title="Next Page" href="/page2">
+                      &raquo;
+                    </a>
+                </div>
+
+              
+          </div>
+      </div>
+      <!--end of row-->
+  </div>
+  <!--end of container-->
+</section>

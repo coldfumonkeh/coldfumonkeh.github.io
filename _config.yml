@@ -53,7 +53,7 @@ plugins:
  - jekyll-seo-tag
  - jekyll-paginate
 
-permalink: /:title
+permalink: /:year/:month/:day/:title:output_ext
 
 paginate: 5
 paginate_path: "/blog/page:num/"
