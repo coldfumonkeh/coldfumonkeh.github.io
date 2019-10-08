@@ -1,9 +1,9 @@
-title: Matt Gifford
+title: Matt Gifford aka coldfumonkeh
 author: coldfumonkeh
 email: matt@monkehworks.com
 my_name: Matt Gifford
 my_lead: > 
-  Consultant Developer, technical author, conference speaker.
+  Consultant developer, technical author, conference speaker.
 description: > # this means to ignore newlines until "show_excerpts:"
 
 
@@ -21,26 +21,8 @@ social_links:
   twitter: coldfumonkeh
   github:  coldfumonkeh
   rss: rss
-  # dribbble: jekyll
-  # facebook: jekyll
-  # flickr:   jekyll
-  # instagram: jekyll
-  # linkedin: jekyll
-  # pinterest: jekyll
   youtube: coldfumonkeh
-  # youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
   youtube_channel_name: coldfumonkeh
-  # telegram: jekyll
-  # googleplus: +jekyll
-  # microdotblog: jekyll
-  # keybase: jekyll
-
-  # Mastodon instances
-  # mastodon:
-  # - username: jekyll
-  #   instance: example.com
-  # - username: jekyll2
-  #   instance: example.com
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
@@ -58,5 +40,5 @@ plugins:
 
 permalink: /:year/:month/:day/:title:output_ext
 
-paginate: 5
+paginate: 10
 paginate_path: "/blog/page:num/"

@@ -1,1 +1,4 @@
 /*! Place your custom styles here */
+.background-image-holder {
+    background-position: 50% 15% !important;
+}

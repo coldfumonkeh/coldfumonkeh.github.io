@@ -1,4 +1,6 @@
 ---
+sitemap:
+  exclude: 'yes'
 ---
 {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
 [
