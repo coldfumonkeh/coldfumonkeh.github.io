@@ -46,7 +46,7 @@ The value from the first `map()` function is each sub-array included within the 
 
 We can take that sub-array and send it through the pipeline, adding a second `map()` function. We'll pass that array through to an external function, `artistDetailStream()`, which will send off a request to the [Spotify Web API](https://github.com/coldfumonkeh/Spotify-Web-API) to receive information for that artist, searching by the given name.
 
-`objSpotify` relates to a variable assignment for the Spotifuy Web API component, not included here as it contains oauth-related information as part of the constuctor. We also pass through the instantiated `streamBuilder` component into the `artistDetailStream()` function.
+`objSpotify` relates to a variable assignment for the Spotify Web API component, not included here as it contains oauth-related information as part of the constuctor. We also pass through the instantiated `streamBuilder` component into the `artistDetailStream()` function.
 
 <script src="https://gist.github.com/coldfumonkeh/735a12f802a07f36d73e46880aea4c47.js"></script>
 
