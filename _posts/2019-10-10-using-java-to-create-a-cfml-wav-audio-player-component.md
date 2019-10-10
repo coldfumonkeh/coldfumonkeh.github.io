@@ -52,7 +52,7 @@ This can be useful to cut out any annoying introductions to songs. I mean, who w
 
 ### Looping
 
-You can loop an audio file endlessly, should you wish too:
+You can loop an audio file endlessly, should you wish to:
 
 <script src="https://gist.github.com/coldfumonkeh/e6fc8555b62e28854625080d93534ea4.js"></script>
 
