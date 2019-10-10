@@ -2,3 +2,7 @@
 .background-image-holder {
     background-position: 50% 15% !important;
 }
+
+p.blog-list-item-excerpt {
+    margin-top: 15px;
+}

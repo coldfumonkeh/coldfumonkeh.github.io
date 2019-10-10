@@ -15,6 +15,9 @@ layout: default
                 <p class="lead">
                     {{ post.title | escape }}
                 </p>
+                <p class="blog-list-item-excerpt">
+                  {{ post.excerpt | strip_newlines | truncatewords: 50 }}
+                </p>
             </div>
             <div class="col-md-3 text-right text-center-xs">
                 <a class="btn type--uppercase" href="{{ post.url | relative_url }}">
