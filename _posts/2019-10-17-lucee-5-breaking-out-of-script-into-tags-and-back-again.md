@@ -7,10 +7,10 @@ categories:
 - development
 tags:
 - coldfusion
-excerpt: "Break out of cfscript to write tag-based code in Lucee 5.3."
+excerpt: "Break out of cfscript to write tag-based code in Lucee 5.3.4.*"
 ---
 
-There's a **SECRET** bit of functionality in Lucee 5.3 that you may not know about yet, and this is the ability to write tag-based CFML within the context of `cfscript` code.
+There's a **SECRET** bit of functionality in Lucee 5.3.4.* that you may not know about yet, and this is the ability to write tag-based CFML within the context of `cfscript` code.
 
 Imagine the following example. I have a table into which I want to output the rows of data from a collection. It could be an array, query, nested structures or any other format of data. In this case, I have an array of structural (dummy) data to display:
 
@@ -32,3 +32,7 @@ These will be familiar to anyone who's ever written a block of code in Markdown,
 <script src="https://gist.github.com/coldfumonkeh/e88be2cdf6239a95ca919dfa45d2e81b.js"></script>
 
 That's it. Nice and easy.
+
+An additional example from the Lucee keynote at CFCamp this morning:
+
+<script src="https://gist.github.com/coldfumonkeh/c6e8a01191dab2bfd2b743a6a60ef54f.js"></script>
