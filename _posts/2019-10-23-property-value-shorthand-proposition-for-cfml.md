@@ -30,7 +30,7 @@ In the above example, the `dog` and `bird` variables still match the property na
 
 Let's consider this in a CFML context.
 
-Of course it would be amazing to have the same functionality when adding values into a CFML struct:
+I think it would be amazing to have the same functionality when adding values into a CFML struct:
 
 <script src="https://gist.github.com/coldfumonkeh/ba1c263659a0ea6c34d69cf572d35ecc.js"></script>
 
