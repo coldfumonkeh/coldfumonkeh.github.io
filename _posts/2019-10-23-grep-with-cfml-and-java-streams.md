@@ -57,7 +57,7 @@ It doesn't return line numbers when perhaps it should. Agsin, before anyone judg
 
 You all know I love `cbStreams`. It could do most if not all of this as well, but I wanted to try and come up with something quickly without dependencies for an extra challenge.
 
-It will be going into Github this afternoon, but the bare bones is below in the gist.
+It is available on [Github](https://github.com/coldfumonkeh/grep), but the bare bones are below in the gist.
 
 <script src="https://gist.github.com/coldfumonkeh/5cf17b6a6918cc55f5e4e3d91ee34913.js"></script>
 
