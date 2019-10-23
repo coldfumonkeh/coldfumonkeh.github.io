@@ -7,7 +7,7 @@ categories:
 - ColdFusion
 tags:
 - ColdFusion
-excerpt: "Part of my wishlist for future CFML engines is the property value shorthand. "
+excerpt: "Part of my wishlist for future CFML engines is the property value shorthand."
 ---
 
 The object property value shorthand has been available in JavaScript using ES6/ES2015 for some time. I personally think it's a fantastic language feature that streamlines code and I would love to see it as part of future CFML engine updates.
