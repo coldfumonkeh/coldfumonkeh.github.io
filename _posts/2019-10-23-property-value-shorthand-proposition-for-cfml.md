@@ -36,6 +36,8 @@ I think it would be amazing to have the same functionality when adding values in
 
 How about adding shorthand references in when sending argument values into a function?
 
+I've created a **very** basic method in the following example with three argument values:
+
 <script src="https://gist.github.com/coldfumonkeh/98d51aac98a5ca21857105a486f11f45.js"></script>
 
 CFML functions already let you send in arguments without directly naming the property, but those depend on the values matching the order of the expected arguments within the function.
