@@ -42,7 +42,7 @@ I've created a **very** basic method in the following example with three argumen
 
 CFML functions already let you send in arguments without directly naming the property, but those depend on the values matching the order of the expected arguments within the function.
 
-In the above example we are sending `to`, `from` and then `message`, but the function would automatically attribute the `from` value to the `message` argument and the `message` value to the `from` argument.
+In the above example we are sending `to`, `from` and then `message`, but the function would automatically apply the `from` value to the `message` argument and the `message` value to the `from` argument.
 
 Ideally I'd love all future CFML engines to be able to determine which variable is assigned to which argument based upon the variable name matching the argument name.
 
