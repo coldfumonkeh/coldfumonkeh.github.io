@@ -3,3 +3,7 @@ _site
 .jekyll-metadata
 
 mode_modules/
+
+
+.DS_Store
+**/.DS_Store
