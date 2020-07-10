@@ -36,51 +36,7 @@ I got Pete's reply this morning, and so after a coffee and a bit of a play with 
 
 Here's a snippet of the initial pipeline script ([the full raw script can be found here](https://github.com/coldfumonkeh/oauth2/blob/2838894bcf002b9f40cddf89dfc85a3886d612a1/azure-pipelines.yml)):
 
-
-```
-pool:
-  vmImage: 'ubuntu-16.04'
-
-stages:
-  - stage: Testing
-    jobs:
-    - job: Lucee4
-      steps:
-      - script: |
-          echo Starting the build
-          curl --location -o /tmp/box.zip https://www.ortussolutions.com/parent/download/commandbox/type/bin
-          unzip /tmp/box.zip -d /tmp/
-          chmod a+x /tmp/box
-          /tmp/box install production=false
-          /tmp/box server start cfengine=lucee@4
-          mkdir /tmp/results/
-          /tmp/box testbox run outputFile=testbox-lucee4.xml reporter=junit
-      - task: PublishTestResults@2
-        inputs:
-          testResultsFormat: 'JUnit'
-          testResultsFiles: '**/testbox-*.xml' 
-          testRunTitle: TestBox Tests
-          failTaskOnFailedTests: true
-        displayName: 'TestBox Results'
-    - job: Lucee5
-      steps:
-      - script: |
-          echo Starting the build
-          curl --location -o /tmp/box.zip https://www.ortussolutions.com/parent/download/commandbox/type/bin
-          unzip /tmp/box.zip -d /tmp/
-          chmod a+x /tmp/box
-          /tmp/box install production=false
-          /tmp/box server start cfengine=lucee@5
-          mkdir /tmp/results/
-          /tmp/box testbox run outputFile=testbox-lucee5.xml reporter=junit
-      - task: PublishTestResults@2
-        inputs:
-          testResultsFormat: 'JUnit'
-          testResultsFiles: '**/testbox-*.xml' 
-          testRunTitle: TestBox Tests
-          failTaskOnFailedTests: true
-        displayName: 'TestBox Results'
-```
+<script src="https://gist.github.com/coldfumonkeh/b3955a6b936d1ef71189f233a71050d5.js"></script>
 
 You can see that using `stages` I am able to split up the pipeline and each stage has a number of `jobs`. Each `job` relates to a specific CFML engine testing environment. The script block above shows the `Lucee4` and `Lucee5` jobs in the `Testing` stage.
 
@@ -103,7 +59,7 @@ After each script step for each CFML engine, the pipeline then runs an Azure int
 
 I am sure this pipeline can be fine-tuned and improved by someone with more knowledge or experience than I on Azure's pipelines, but I am really happy that the pipelines are working and the test results and status are clearly visible for all contributors and visitors to the repository.
 
-I do like that any vistor to the repository can dig into the status of the build and see what has passed / failed. and view the pipeline in more detail:
+I do like that any vistor to the repository can dig into the status of the build and see what has passed / failed, and view the pipeline in more detail:
 
 ![Viewing the repository pipeline in more detail](/assets/uploads/2020/07/azure-github-pipeline-details.png)
 
